@@ -252,6 +252,7 @@ a:hover {
 
 .arrivnav {
   text-transform: uppercase;
+  margin-bottom:4%;
 }
 
 .arrivnav ul {
@@ -273,6 +274,7 @@ a:hover {
   justify-content: space-around;
   width: 90%;
   align-items: center;
+  margin: 0 auto;
 }
 
 .imgarrival {
@@ -288,3 +290,4 @@ a:hover {
   height: auto;
   object-fit: cover;
 }
+
