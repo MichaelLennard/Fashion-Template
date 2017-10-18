@@ -35,12 +35,6 @@ header {
   text-transform: none;
 }
 
-.logo {
-  /* display: flex; */
-  /* content: url("../img/logo.jpg");
-  background-repeat: no-repeat; */
-}
-
 .mail::before {
   word-spacing: 0.2rem;
 }
@@ -144,7 +138,7 @@ a:hover {
   text-transform: uppercase;
 }
 .shippingicon {
-  margin: 15% 0% 0% 8%;
+  margin: auto;
 }
 
 .supportcontent {
@@ -177,82 +171,48 @@ a:hover {
   background-color: rgb(45, 190, 176);
 }
 
-.handpicked {
-  width: 100%;
+.subheadline {
+  position: relative;
+  padding: 2rem 0;
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 2.5%;
-  height: auto;
+  font-style: italic;
 }
 
-.handpicked::before {
+.subheadline::before {
   background: #ddd;
   content: "";
   height: 2px;
+  position: absolute;
+  top: 50%;
   left: 0;
-  position: absolute;
-  width: 35%;
-  margin-top: 1.1%;
-  margin-left: 6.7%;
-}
-
-.handpicked::after {
-  background: #ddd;
-  content: "";
-  height: 2px;
   right: 0;
-  position: absolute;
-  width: 35%;
-  margin-top: 1.1%;
-  margin-right: 6.7%;
 }
 
-.handpickedcontent {
+.subheadlinecontent {
+  position: relative;
   font-size: 1.8rem;
-  padding: 5% 5%;
+  margin: 0 auto;
+  padding: 0 5%;
+  background: white;
 }
 
-.fresharrivals {
-  width: 100%;
-  text-align: center;
-  margin-top: 2.5%;
-  height: auto;
-  margin-bottom: 2%;
-  padding-top: 4%;
+.with-background::before {
+  background: #d2d2d2;
 }
-.fresharrivals::before {
-  background: #ddd;
-  content: "";
-  height: 2px;
-  left: 0;
-  position: absolute;
-  width: 35%;
-  margin-top: 1.1%;
-  margin-left: 6.7%;
-}
-
-.fresharrivals::after {
-  background: #ddd;
-  content: "";
-  height: 2px;
-  right: 0;
-  position: absolute;
-  width: 35%;
-  margin-top: 1.1%;
-  margin-right: 6.7%;
-}
-
-.fresharrivalscontent {
-  font-size: 1.8rem;
-  padding: 5% 5%;
+.with-background .subheadlinecontent {
+  background: rgb(235, 235, 235);
 }
 
 .arrivals {
   background: rgb(235, 235, 235);
+  padding-bottom: 4%;
 }
 
 .arrivnav {
   text-transform: uppercase;
-  margin-bottom:4%;
+  margin-bottom: 4%;
 }
 
 .arrivnav ul {
@@ -268,10 +228,27 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.imgarrivaltext {
+  text-align: center;
+}
+
+.imgarrivaltext p:first-child {
+  text-transform: uppercase;
+  color: black;
+}
+.imgarrivaltext p:last-child {
+  color: turquoise;
+}
+
+.top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
 .imagearrivals {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
   align-items: center;
   margin: 0 auto;
@@ -282,12 +259,232 @@ a:hover {
   border-style: solid;
   border-width: 8px;
   border-color: white;
+  background: white;
   margin: auto;
 }
 
-.imgarr {
+.article {
+  display: block;
+  text-decoration: none;
+  width: 20%;
+  border-style: solid;
+  border-width: 8px;
+  border-color: white;
+  background: white;
+}
+.img-container {
+  position: relative;
   width: 100%;
-  height: auto;
+  overflow: hidden;
+}
+
+.image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 133%;
+  overflow: hidden;
+}
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease;
   object-fit: cover;
 }
 
+.text {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  opacity: 0;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 32px;
+  transition: all 400ms ease;
+}
+
+.article:hover .image img {
+  transform: scale(1.1);
+  opacity: 0.3;
+}
+
+.article:hover .text {
+  opacity: 0.7;
+  transform: translate(0, -70px);
+}
+
+.imagearea {
+  background: white;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 2% 0%;
+}
+
+.coatimage {
+  display: inline-block;
+  position: relative;
+  width: 34%;
+  text-transform: uppercase;
+}
+
+.coatimage img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coatimage h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 1.7rem;
+  top: 40%;
+  left: 0;
+  width: 100%;
+}
+
+.coatimage span {
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.shippingimage {
+  display: block;
+  position: relative;
+  width: 33%;
+  text-transform: uppercase;
+}
+
+.shippingimage img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shippingimage span {
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 0%;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.shippingimage h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 1.7rem;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+}
+
+.salesimage {
+  display: block;
+  position: relative;
+  width: 33%;
+  text-transform: uppercase;
+}
+
+.salesimage img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salesimage h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 1.7rem;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+}
+
+.salesimage span {
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 0%;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.fromblog {
+  background: rgb(235, 235, 235);
+  width: 100%;
+  padding: 0.1% 0;
+}
+
+.blogentries {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3% auto;
+  color: white;
+}
+
+.blogentry {
+  width: 30%;
+}
+
+.blogentry .blogimage {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(9 / 16 * 100%);
+}
+
+.blogimage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloggername {
+  position: absolute;
+  text-align: left;
+  left: 7%;
+  top: 82%;
+  background: black;
+}
+
+.comments {
+  background: black;
+  position: absolute;
+  text-align: center;
+  right: 25%;
+  top: 82%;
+}
+
+.hearts {
+  background: black;
+  position: absolute;
+  text-align: right;
+  color: white;
+  right: 5%;
+  top: 82%;
+}
