@@ -3,42 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Start of something new..</title>
-  <link rel="stylesheet" href="../styles/styles.css" </head>
+  <link rel="stylesheet" href="../styles/output.css" </head>
   <link rel="stylesheet" href="../assets/fontawe/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <html>
 
   <body>
     <a id="top"></a>
     <header>
-      <div class="firstheaderRow">
-        <p>
-          <span class="my">
-            <i class="fa fa-phone" aria-hidden="true"></i>12-312-546-897</span>
-          <span class="openingTimes">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>MON-SAT: 08 Am - 17 Pm</span>
-          <span class="mail">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>Support@example.com</span>
-        </p>
-      </div>
-      <div class="secondheaderRow">
-        <p>
-          <span class="my">
-            <i class="fa fa-key" aria-hidden="true"></i>Login</span>
-          <span class="login">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>Register</span>
-          <span class="mail">Settings</span>
-          <span class="mail">English</span>
-        </p>
+      <div class="container">
+        <div class="col left">
+          <div class="my">
+            <i class="fa fa-phone" aria-hidden="true"></i>12-312-546-897</div>
+          <div class="openingTimes">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>MON-SAT: 08 Am - 17 Pm</div>
+          <div class="mail">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>Support@example.com</div>
+        </div>
+        <div class="col right">
+          <div class="my">
+            <i class="fa fa-key" aria-hidden="true"></i>Login</div>
+          <div class="login">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>Register</div>
+          <div class="settings">Settings</div>
+          <div class="language">English</div>
+        </div>
       </div>
     </header>
     <nav>
       <!-- <span class="logo">Logo</span> -->
-      <ul class="menu">
+      <ul class="menu container">
         <li>
           <a href="#">Home</a>
         </li>
-        <li>
+        <li class="ankerpage">
           <a href="#">Pages</a>
+          <div class="pages">
+            <div class="dropimage">
+              <img src="../assets/images/slide1.jpg" />
+            </div>
+
+            <div class="pagediv">
+              <h2>Shop Pages</h2>
+              <ul class="menu">
+                <li>
+                  <a href="#">Shop fullwidth</a>
+                </li>
+                <li>
+                  <a href="#">show with collection</a>
+                </li>
+                <li>
+                  <a href="#">shop left sidebar</a>
+                </li>
+              </ul>
+            </div>
+            <div class="pagediv">
+              <h2>Inner Page</h2>
+              <ul class="menu">
+                <li>
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <a href="#">Contact us</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li>
           <a href="#">Category</a>
@@ -64,42 +97,53 @@
         </li>
       </ul>
     </nav>
-    <div class="slider">
+    <div class="slider-container">
+      <div class="sliderimage">
+        <!-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> -->
+        <img class="mySlides" src="../assets/images/slide1.jpg">
+        <img class="mySlides" src="../assets/images/slide2.jpg">
+        <img class="mySlides" src="../assets/images/shoes.jpg">
+        <img class="mySlides" src="../assets/images/blazer.jpg">
+      </div>
     </div>
 
 
 
     <div class="order">
-      <div class="shipping">
-        <span class="shippingicon">
-          <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
-        </span>
-        <div class="shippingcontent">
-          <p class="shipping1">Free Shipping</p>
-          <p class="shipping2">In Order Min $400</p>
+      <div class="container">
+        <div class="shipping">
+          <span class="shippingicon">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+          </span>
+          <div class="shippingcontent">
+            <p class="shipping1">Free Shipping</p>
+            <p class="shipping2">In Order Min $400</p>
+          </div>
         </div>
-      </div>
-      <div class="returns">
-        <p class="returns1">30-days Returns</p>
-        <p class="returns2">Money Back Guarantee</p>
-      </div>
-      <div class="support">
-        <span class="supporticon">
-          <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
-        </span>
-        <div class="supportcontent">
-          <p class="support1">24/7 Support</p>
-          <p class="support2">Lifetime Support</p>
+        <div class="returns">
+          <p class="returns1">30-days Returns</p>
+          <p class="returns2">Money Back Guarantee</p>
+        </div>
+        <div class="support">
+          <span class="supporticon">
+            <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
+          </span>
+          <div class="supportcontent">
+            <p class="support1">24/7 Support</p>
+            <p class="support2">Lifetime Support</p>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <div class="handpicked subheadline">
+
+    <div class="handpicked subheadline container">
       <span class="subheadlinecontent">Handpicked</span>
     </div>
     <div class="arrivals">
-      <div class="with-background subheadline">
+      <div class="with-background subheadline container">
         <span class="subheadlinecontent">Fresh Arrivals</span>
       </div>
       <nav class="arrivnav">
@@ -122,13 +166,13 @@
 
         </ul>
       </nav>
-      <div class="imagearrivals">
+      <div class="imagearrivals container">
         <a class="article" href="#">
           <div class="img-container">
             <div class="image">
               <img src="../assets/images/dress.jpg" />
             </div>
-            <div class="text">hui</div>
+            <div class="text">White Dress</div>
           </div>
           <div class="imgarrivaltext">
             <p>Neuqe Metus</p>
@@ -140,7 +184,7 @@
             <div class="image">
               <img src="../assets/images/whitecoat.jpg" />
             </div>
-            <div class="text">hui</div>
+            <div class="text">White Coat</div>
           </div>
           <div class="imgarrivaltext">
             <p>Neuqe Metus</p>
@@ -152,7 +196,7 @@
             <div class="image">
               <img src="../assets/images/coat.jpg" />
             </div>
-            <div class="text">hui</div>
+            <div class="text">Black Coat</div>
           </div>
           <div class="imgarrivaltext">
             <p>Neuqe Metus</p>
@@ -164,7 +208,7 @@
             <div class="image">
               <img src="../assets/images/hat.jpg" />
             </div>
-            <div class="text">hui</div>
+            <div class="text">Hat</div>
           </div>
           <div class="imgarrivaltext">
             <p>Neuqe Metus</p>
@@ -193,33 +237,50 @@
     </div>
 
     <div class="fromblog">
-      <div class="subheadline with-background">
+      <div class="subheadline with-background container">
         <span class="subheadlinecontent">From Blog</span>
       </div>
       <div class="blogentries">
         <div class="blogentry">
           <div class="blogimage">
             <img src="../assets/images/slide1.jpg" />
-            <span class="bloggername">Enny White</span>
-            <span class="comments">6</span>
-            <span class="hearts">73</span>
+            <div class="blogcontent">
+              <p class="bloggername">
+                <i class="fa fa-user" aria-hidden="true"></i> Enny White</p>
+              <p class="comments">
+                <i class="fa fa-comment" aria-hidden="true"></i> 6</p>
+              <p class="hearts">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                </i> 73</p>
+            </div>
           </div>
         </div>
         <div class="blogentry">
           <div class="blogimage">
             <img src="../assets/images/blazer.jpg" />
-            <span class="bloggername">Enny White</span>
-            <span class="comments">6</span>
-            <span class="hearts">73</span>
+            <div class="blogcontent">
+
+              <p class="bloggername">
+                <i class="fa fa-user" aria-hidden="true"></i> Enny White</p>
+              <p class="comments">
+                <i class="fa fa-comment" aria-hidden="true"></i> 6</p>
+              <p class="hearts">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                </i> 73</p>
+            </div>
           </div>
         </div>
         <div class="blogentry">
           <div class="blogimage">
             <img src="../assets/images/shoes.jpg" />
             <div class="blogcontent">
-              <span class="bloggername">Enny White</span>
-              <span class="comments">6</span>
-              <span class="hearts">73</span>
+              <p class="bloggername">
+                <i class="fa fa-user" aria-hidden="true"></i> Enny White</p>
+              <p class="comments">
+                <i class="fa fa-comment" aria-hidden="true"></i> 6</p>
+              <p class="hearts">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                </i> 73</p>
             </div>
           </div>
         </div>
@@ -230,5 +291,7 @@
     </div>
 
   </body>
+
+  <script src="../scripts/slider.js"></script>
 
   </html>
