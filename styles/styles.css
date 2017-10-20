@@ -3,6 +3,10 @@ body {
   background-color: white;
   margin: 0;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 header {
   color: white;
@@ -13,52 +17,48 @@ header {
   font-weight: bold;
   line-height: 1.8rem;
 }
-
-.my {
-  text-transform: none;
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header i {
   padding-right: 0.4rem;
 }
-.my::before {
-  word-spacing: 0.2rem;
+header .col {
+  padding: 0.6rem 0;
 }
-
-.openingTimes {
-  text-transform: none;
-  padding-right: 0.4rem;
+header .col > div {
+  display: inline-block;
 }
-
-.openingTimes::before {
-  word-spacing: 0.2rem;
+header .left > div {
+  margin-right: 1rem;
 }
-
-.mail {
-  text-transform: none;
-}
-
-.mail::before {
-  word-spacing: 0.2rem;
+header .right > div {
+  margin-left: 1rem;
 }
 
 .menu {
-  line-height: 2.6rem;
+  line-height: 2.6;
 }
 
-nav ul {
+nav {
+  position: relative;
+}
+nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0 10% 0 0;
 }
 
-li {
+nav > ul > li {
   text-transform: uppercase;
   list-style-type: none;
-  margin: 1% 1% 1% 1%;
+  padding: 1rem;
   font-weight: bold;
 }
 
-ul > li:first-child > a {
+nav > ul > li:first-child > a {
   text-decoration: none;
   color: rgb(45, 190, 176);
 }
@@ -81,20 +81,43 @@ a:hover {
   position: fixed;
 }
 
-.slider {
+.slider-container {
+  position: absolute;
   width: 100%;
-  content: url("../assets/images/slide2.jpg");
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.sliderimage {
+  position: relative;
+  width: 100%;
+  display: block;
   background-repeat: no-repeat;
+}
+
+.sliderimage img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
   max-height: 600px;
   object-fit: cover;
 }
 
 .order {
+  margin-top: 37.5rem;
+}
+
+.order > div {
   display: flex;
   justify-content: space-around;
   background: rgb(235, 235, 235);
   margin: 0;
   color: white;
+}
+
+.order .container {
+  margin: 0 auto;
 }
 
 .shipping {
@@ -146,7 +169,7 @@ a:hover {
   font-weight: bold;
 }
 .supporticon {
-  margin: 15% 0% 0% 0%;
+  margin: auto;
 }
 .support1 {
   text-transform: uppercase;
@@ -174,8 +197,6 @@ a:hover {
 .subheadline {
   position: relative;
   padding: 2rem 0;
-  width: 90%;
-  margin: 0 auto;
   text-align: center;
   font-style: italic;
 }
@@ -249,9 +270,7 @@ a:hover {
 .imagearrivals {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   align-items: center;
-  margin: 0 auto;
 }
 
 .imgarrival {
@@ -464,27 +483,81 @@ a:hover {
   object-fit: cover;
 }
 
-.bloggername {
+.blogcontent {
   position: absolute;
-  text-align: left;
-  left: 7%;
-  top: 82%;
-  background: black;
-}
-
-.comments {
-  background: black;
-  position: absolute;
-  text-align: center;
-  right: 25%;
-  top: 82%;
-}
-
-.hearts {
-  background: black;
-  position: absolute;
-  text-align: right;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  padding: 0.2rem 0.1rem;
   color: white;
-  right: 5%;
-  top: 82%;
+  display: flex;
+  justify-content: space-around;
+}
+.blogcontent .bloggername {
+  text-align: left;
+  padding-right: 9rem;
+}
+
+.blogcontent .comments {
+  text-align: right;
+}
+
+.blogcontent .hearts {
+  text-align: center;
+}
+
+.pages {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4.6rem;
+  margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.ankerpage:hover .pages {
+  max-height: 30rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pages a {
+  color: white;
+  margin: auto;
+}
+
+.pages a:first-child {
+  color: white;
+}
+
+.pages li {
+  text-align: left;
+}
+
+.pagediv {
+  width: 33%;
+  margin: auto;
+}
+
+.pagediv:hover a {
+  color: turquoise;
+}
+
+.dropimage {
+  width: 33%;
+  margin: auto;
+}
+
+.dropimage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: auto;
+  object-fit: cover;
 }
